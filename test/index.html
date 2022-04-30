@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="../dist/vuetom-ui.js"></script>
+    <link rel="stylesheet" href="../dist/vuetom-ui.css">
+    
+  </head>
+  <body>
+    <div id="app">
+      {{message}}
+      <!-- <vt-button>xxx</vt-button> -->
+      <vt-div>sdfg</vt-div>
+    </div>
+    <script>
+      console.log(window);
+      const App = {
+        components: {
+          'vt-div': VuetomUI.VtDiv
+        },
+        data() {
+          return {
+            message: "Hello Element Plus",
+          };
+        },
+      };
+      const app = Vue.createApp(App);
+      app.use(VuetomUI);
+      app.mount("#app");
+    </script>
+  </body>
+</html>
