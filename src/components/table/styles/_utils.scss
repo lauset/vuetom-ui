@@ -1,0 +1,47 @@
+/* Utility styles
+************************************************/
+.vt-right-align{
+  text-align: right;
+}
+
+.vt-left-align{
+  text-align: left;
+}
+
+.vt-center-align{
+  text-align: center;
+}
+
+.vt-pull-left{
+  float:  left !important;
+}
+
+.vt-pull-right{
+  float:  right !important;
+}
+
+.vt-clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.vt-responsive {
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+}
+
+.vt-text-disabled{
+  color: $secondary-text-color;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}

@@ -1,0 +1,8 @@
+.vt-table{
+  &.bordered td, &.bordered th {
+      border: 1px solid $border-color;
+  }
+  &.bordered th.vt-row-header{
+    border-bottom: 3px solid $border-color;
+  }
+}

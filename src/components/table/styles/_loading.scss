@@ -1,0 +1,39 @@
+.vt-loading{
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  margin-top: 117px;
+  &__content{
+    background-color: #ebebeb;
+    color: #7390b7;
+    padding: 7px 30px;
+    border-radius: 3px;
+  }
+}
+
+.vt-inner-wrap.is-loading{
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.dark-mode {
+  .vt-loading{
+    &__content{
+      background-color: #3a3a3a;
+      color: #8fa7de;
+    }
+  } 
+  .vt-inner-wrap.is-loading{
+    opacity: 1;
+    &::before{
+      content: "";
+      background-color: #0a0b0bcf;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+    }
+  }
+}

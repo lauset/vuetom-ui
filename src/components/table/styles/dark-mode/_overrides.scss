@@ -1,0 +1,22 @@
+$thead-bg-color-1: #32353c;
+$thead-bg-color-2: #2f333b;
+
+$chevron-color: lighten($thead-bg-color-1, 10%);
+
+$text-color: #dae2f0;
+$text-color-td: #b9c6d9;
+$text-shadow-color: lighten(#2C394F, 10%);
+
+$secondary-text-color: rgb(152, 165, 185) ;
+$border-color: #3a3a3a;
+$border-color-td: #303847;
+
+$input-border-color: transparent;
+$input-bg: #34445f;
+
+$table-bg: #2d3136;
+$highlight-color:#fff;
+$table-tr2-bg: #24292d;
+
+$fixed-left-column: inset 10px 0 10px -10px rgba(0, 0, 0, .36);
+$fixed-right-column: inset -10px 0 10px -10px rgba(0, 0, 0, .36);
