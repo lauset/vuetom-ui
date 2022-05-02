@@ -144,14 +144,11 @@ const VtButton = {
     }
   },
   computed: {
-    _alFormItemSize() {
-      return (this.alFormItem || {}).alFormItemSize
-    },
     buttonSize() {
-      return this.size || this._alFormItemSize || (window.VuetomUI.$ELEMENT || {}).size
+      return this.size || (window.VuetomUI.$ELEMENT || {}).size
     },
     buttonDisabled() {
-      return this.disabled || (this.alForm || {}).disabled
+      return this.disabled
     }
   }
 }

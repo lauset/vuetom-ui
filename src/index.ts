@@ -11,6 +11,7 @@ import VtLink from './components/link'
 import VtRow from './components/row'
 import VtCol from './components/col'
 import VtDiv from './components/div'
+import VtTable from './components/table'
 
 const components = [
   VtAlert,
@@ -21,6 +22,7 @@ const components = [
   VtRow,
   VtCol,
   VtDiv,
+  VtTable
 ]
 
 const install = function (app: App, opts = {}) {
@@ -42,6 +44,7 @@ const VuetomUI = {
   VtRow,
   VtCol,
   VtDiv,
+  VtTable
 }
 
 export default VuetomUI
