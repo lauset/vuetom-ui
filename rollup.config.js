@@ -1,5 +1,6 @@
 import esbuild from 'rollup-plugin-esbuild'
 import typescript from 'rollup-plugin-typescript2'
+import resolve from '@rollup/plugin-node-resolve'
 import vue from 'rollup-plugin-vue'
 import scss from 'rollup-plugin-scss'
 import dartSass from 'sass'
@@ -8,6 +9,15 @@ import babel from 'rollup-plugin-babel'
 import replace from 'rollup-plugin-replace'
 
 const env = process.env.NODE_ENV
+
+const pkg = require('./package.json')
+
+const banner = `/*!
+  * ${pkg.name} v${pkg.version}
+  * Build Date ${new Date().toLocaleString()} 
+  * Build Env ${env}
+  * @license MIT
+  */`
 
 const file = (type) => `dist/vuetom-ui.${type}.js`
 
@@ -31,7 +41,8 @@ export default {
     name: 'VuetomUI',
     file: 'dist/vuetom-ui.js',
     format: 'umd',
-    plugins: [terser()],
+    banner: banner,
+    plugins: [process.env.NODE_ENV === 'production' ? terser() : null],
   },
   plugins: [
     scss({ include: /\.scss$/, sass: dartSass }),
@@ -47,6 +58,7 @@ export default {
     // babel({
     //   exclude: 'node_modules/**',
     // }),
+    // resolve(),
     replace({
       'process.env.NODE_ENV': JSON.stringify(env),
     }),
