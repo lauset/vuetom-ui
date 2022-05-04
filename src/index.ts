@@ -12,6 +12,7 @@ import VtRow from './components/row'
 import VtCol from './components/col'
 import VtDiv from './components/div'
 import VtTable from './components/table'
+import VtMessage from './components/message'
 
 const components = [
   VtAlert,
@@ -29,7 +30,7 @@ const install = function (app: App, opts = {}) {
   components.forEach((component) => {
     app.component(component.name, component)
   })
-  // app.config.globalProperties.$notify = Notification
+  app.config.globalProperties.$msg = VtMessage
 }
 
 const VuetomUI = {
