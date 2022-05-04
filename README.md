@@ -29,17 +29,29 @@ A Vue3 UI library
 
 ## Quick Start 🏷️
 
-install
+**install**
 
    ```
    npm i vuetom-ui
    ```
 
-use
+**use(es)**
 
    ```
    import VuetomUI from 'vuetom-ui'
    import 'vuetom-ui/dist/vuetom-ui.css'
+   ```
+
+**use(borwser)**
+
+   ```html
+   <script src="https://unpkg.com/vue@next"></script>
+   <script src="../dist/vuetom-ui.js"></script>
+   <link rel="stylesheet" href="../dist/vuetom-ui.css">
+
+   const app = Vue.createApp(App);
+   app.use(VuetomUI);
+   app.mount("#app");
    ```
 
 ## development ⚒
@@ -57,6 +69,7 @@ use
    ```bash
    npm run build
 
+   # npm run b [for development build]
    # npm run build:umd [for umd]
    # npm run build:esm [for es]
    # npm run build:theme [for themes]
@@ -83,18 +96,18 @@ use
 
 | VuetomUI Version | Info |
 | - | :- |
-  vuetom-ui 0.1.0 | ... |
+0.1.0 | Button Row Col |
+0.2.0 | Table Message |
 
 ## UI Support 🖥️
 
-- Nodj.js (require)
+- ~~Nodj.js (require)~~
 - ES6 (import)
 - Browser (`<script>`)
 
 ## Changelog 📆
 
-Please refer to the [ChangeLog](ChangeLog.md) file.
-
+~~Please refer to the [ChangeLog](ChangeLog.md) file.~~
 
 ## Credits 🙏
 
