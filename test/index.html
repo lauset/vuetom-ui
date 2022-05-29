@@ -6,22 +6,109 @@
     
   </head>
   <body>
-    <div id="app">
-      {{message}}
-      <!-- <vt-button>xxx</vt-button> -->
-      <vt-div>sdfg</vt-div>
+    <div id="app" class="dark-mode">
+      <vt-button @click="test">Message</vt-button>
+      {{message}}<br>
+      <vt-table
+        :columns="columns"
+        :rows="rows"
+      >
+      <template #loadingContent>
+        111
+      </template>
+    </vt-table>
     </div>
     <script>
       console.log(window);
       const App = {
         components: {
-          'vt-div': VuetomUI.VtDiv
+          'vt-table': VuetomUI.VtTable
         },
         data() {
           return {
             message: "Hello Element Plus",
+            columns: [{
+                label: 'Name',
+                field: 'name',
+                fixed: 'left'
+              },
+              {
+              label: 'Name1111111',
+              field: 'f1',
+              fixed: 'left'
+            },
+            {
+              label: 'Name22222222',
+              field: 'f2'
+            },
+            {
+              label: 'Name33333',
+              field: 'f3'
+            },
+            {
+              label: 'f',
+              field: 'f4'
+            },
+            {
+              label: 'f5',
+              field: 'f5'
+            },
+            {
+               label: '这是一段比较长的内容',
+              field: 'f6',
+              width:'100px'
+            },
+            {
+              label: 'This a long long word',
+              field: 'f7'
+            },
+            {
+              label: 'f8',
+              field: 'f8'
+            },
+            {
+              label: 'f999999999999999992ff',
+              field: 'f9'
+            },
+            {
+              label: 'f4',
+              field: 'f10',
+              fixed: 'right'
+            }
+
+            ],
+            rows: [{
+              id: 1,
+              name: 'Mike',
+              age: 22,
+              f1: 12,
+              f2: 12,
+              f3: 12,
+              f4: 12,
+              f5: 12,
+              f6: 12,
+              f7: 12,
+              f8: 12,
+              f9: 12,
+              f10: 12,
+              f11: 12,
+              f12: 12,
+              f13: 12,
+              f14: 12,
+              f15: 12,
+            }],
           };
         },
+        methods: {
+          test() {
+            this.$msg.info("给你个眼神，你懂得",{
+              showClose: true,
+              onClose:function(){
+                  console.log('我懂了')
+              }
+            })
+          }
+        }
       };
       const app = Vue.createApp(App);
       app.use(VuetomUI);
