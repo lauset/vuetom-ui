@@ -107,7 +107,7 @@ A Vue3 UI library
 
 ## Changelog 📆
 
-~~Please refer to the [ChangeLog](ChangeLog.md) file.~~
+Please refer to the [ChangeLog](CHANGELOG.md) file.
 
 ## Credits 🙏
 
