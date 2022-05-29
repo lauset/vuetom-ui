@@ -1,8 +1,5 @@
 import { App } from 'vue'
 
-// import './dist/styles/index.css'
-
-// VuetomUI
 import VtAlert from './components/alert'
 import VtButton from './components/button'
 import VtCard from './components/card'
@@ -12,6 +9,8 @@ import VtRow from './components/row'
 import VtCol from './components/col'
 import VtDiv from './components/div'
 import VtTable from './components/table'
+import VtConsole from './components/console'
+import VtJson from './components/jsonv'
 import VtMessage from './components/message'
 
 const components = [
@@ -23,7 +22,10 @@ const components = [
   VtRow,
   VtCol,
   VtDiv,
-  VtTable
+  VtTable,
+  VtConsole,
+  VtJson,
+  VtMessage
 ]
 
 const install = function (app: App, opts = {}) {
@@ -35,8 +37,13 @@ const install = function (app: App, opts = {}) {
 
 const VuetomUI = {
   name: 'VuetomUI',
-  version: '2.3.0',
-  install,
+  version: '0.2.5',
+  install
+}
+
+export default VuetomUI
+
+export {
   VtAlert,
   VtButton,
   VtCard,
@@ -45,7 +52,8 @@ const VuetomUI = {
   VtRow,
   VtCol,
   VtDiv,
-  VtTable
+  VtTable,
+  VtConsole,
+  VtJson,
+  VtMessage
 }
-
-export default VuetomUI

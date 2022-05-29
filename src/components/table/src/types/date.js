@@ -43,7 +43,7 @@ date.format = function (v, column) {
   if (isValid(date)) {
     return format(date, column.dateOutputFormat);
   }
-  console.error(`Not a valid date: "${v}"`);
+  console.warn(`Not a valid date: "${v}"`);
   return null;
 };
 

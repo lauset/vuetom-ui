@@ -1,4 +1,4 @@
-const getGlobal = (): any => {
+const getg = (): any => {
   if (typeof self !== 'undefined') {
     return self
   }
@@ -8,10 +8,10 @@ const getGlobal = (): any => {
   if (typeof global !== 'undefined') {
     return global
   }
-  throw new Error('unable to locate global object')
+  throw new Error('unable to locate g object')
 }
 
-const global = getGlobal()
+const g = getg()
 
 const STATES = {
   opening: 'MessageMoveIn',
@@ -20,7 +20,7 @@ const STATES = {
 }
 
 var NAMESPACE =
-  (global && global.QMSG_GLOBALS && global.QMSG_GLOBALS.NAMESPACE) ||
+  (g && g.QMSG_gS && g.QMSG_gS.NAMESPACE) ||
   'vt-message'
 
 const ICONS = {
@@ -102,7 +102,7 @@ if (!('classList' in document.documentElement)) {
 
 /**
  * 全局默认配置
- * 可在引入js之前通过QMSG_GLOBALS.DEFAULTS进行配置
+ * 可在引入js之前通过QMSG_gS.DEFAULTS进行配置
  * position {String} 位置，仅支持'center','right','left',默认'center'
  * type {String} 类型，支持'info','warning','success','error','loading'
  * showClose {Boolean} 是否显示关闭图标，默认为false不显示
@@ -125,7 +125,7 @@ var DEFAULTS = Object.assign(
     maxNums: 5,
     html: false,
   },
-  global && global.QMSG_GLOBALS && global.QMSG_GLOBALS.DEFAULTS
+  g && g.QMSG_gS && g.QMSG_gS.DEFAULTS
 )
 
 /**
