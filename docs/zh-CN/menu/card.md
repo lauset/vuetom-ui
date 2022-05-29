@@ -15,7 +15,6 @@ head:
 
 ## 基础用法
 
-<ClientOnly>
-  <CardBasic />
-</ClientOnly>
-
+:::demo
+card/card-basic
+:::

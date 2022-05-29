@@ -47,6 +47,19 @@
       <vt-button type="danger" text>Danger</vt-button>
     </vt-row>
 
+    <h3>按钮大小</h3>
+
+    <p>加上 size 属性能改变按钮大小。</p>
+
+    <vt-row>
+      <vt-button type="primary" size="mini">mini</vt-button>
+      <vt-button type="success">defalut</vt-button>
+      <vt-button type="info" size="medium">medium</vt-button>
+      <vt-button type="warning" size="small">small</vt-button>
+      <vt-button type="danger" size="mini">mini</vt-button>
+      <vt-button type="primary" size="macos">macos</vt-button>
+    </vt-row>
+
     <h3>禁用按钮</h3>
 
     <p>你可以使用 disabled 属性来定义按钮是否被禁用。</p>
@@ -55,15 +68,6 @@
       <vt-button disabled>Default</vt-button>
       <vt-button type="primary" disabled>Primary</vt-button>
       <vt-button type="success" disabled>Success</vt-button>
-      <vt-button type="info" disabled>Info</vt-button>
-      <vt-button type="warning" disabled>Warning</vt-button>
-      <vt-button type="danger" disabled>Danger</vt-button>
-    </vt-row>
-
-    <vt-row>
-      <vt-button plain disabled>Plain</vt-button>
-      <vt-button type="primary" plain disabled>Primary</vt-button>
-      <vt-button type="success" plain disabled>Success</vt-button>
       <vt-button type="info" plain disabled>Info</vt-button>
       <vt-button type="warning" plain disabled>Warning</vt-button>
       <vt-button type="danger" plain disabled>Danger</vt-button>
@@ -83,7 +87,7 @@ const changeShow = () => {
 
 <style lang="scss">
 .example-showcase {
-  .al-row {
+  .vt-row {
     margin-bottom: 20px;
     align-items: baseline;
 

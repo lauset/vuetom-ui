@@ -29,15 +29,14 @@
         <vt-card shadow="hover"> Hover </vt-card>
       </vt-col>
       <vt-col :span="8">
-        <vt-card shadow="never" bgcolor="pink"> Never </vt-card>
+        <vt-card shadow="never" bgcolor="lightgray"> Never </vt-card>
       </vt-col>
     </vt-row>
 
   </div>
 </template>
 
-<script setup>
-
+<script setup lang="ts">
 </script>
 
 <style lang="scss" scoped>

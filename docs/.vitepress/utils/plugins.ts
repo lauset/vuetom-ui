@@ -27,7 +27,6 @@ export const mdPlugin = (md: MarkdownIt) => {
     validate(params) {
       return !!params.trim().match(/^demo\s*(.*)$/)
     },
-
     render(tokens, idx) {
       const data = (md as any).__data
       const hoistedTags: string[] = data.hoistedTags || (data.hoistedTags = [])

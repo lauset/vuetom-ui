@@ -33,11 +33,7 @@ const [sourceVisible, setSourceVisible] = useToggle()
 // const demoSourceUrl = useSourceCode(toRef(props, 'path'))
 const formatPathDemos = computed(() => {
   const demos = {}
-  console.log(123, props.demos)
-
   Object.keys(props.demos).forEach((key) => {
-    console.log(234, key)
-
     demos[key.replace('../../.vitepress/views/', '').replace('.vue', '')] = props.demos[key].default
   })
 
