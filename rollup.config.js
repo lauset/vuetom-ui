@@ -1,16 +1,19 @@
 import esbuild from 'rollup-plugin-esbuild'
-import typescript from 'rollup-plugin-typescript2'
+// import typescript from 'rollup-plugin-typescript2'
 import resolve from '@rollup/plugin-node-resolve'
 import vue from 'rollup-plugin-vue'
 import scss from 'rollup-plugin-scss'
 import dartSass from 'sass'
 import { terser } from 'rollup-plugin-terser'
-import babel from 'rollup-plugin-babel'
-import replace from 'rollup-plugin-replace'
+// import babel from 'rollup-plugin-babel'
+import replace from '@rollup/plugin-replace'
+import path from 'path'
+
+const packagesDir = path.resolve(__dirname, 'packages')
+const uiDir = path.resolve(packagesDir, 'vuetom-ui')
+const pkg = require(path.resolve(uiDir, `package.json`))
 
 const env = process.env.NODE_ENV
-
-const pkg = require('./package.json')
 
 const banner = `/*!
   * ${pkg.name} v${pkg.version}
@@ -19,27 +22,25 @@ const banner = `/*!
   * @license MIT
   */`
 
-const file = (type) => `dist/vuetom-ui.${type}.js`
+const file = (type) => `${uiDir}/dist/vuetom-ui.${type}.js`
 
 export { file }
 
 const overrides = {
   compilerOptions: { declaration: true }, // 是否创建 typescript 声明文件
-  exclude: [ // 排除项
-    'node_modules',
-    'src/App.vue',
-    'src/main.ts'
+  exclude: [ 
+    'node_modules'
   ]
 }
 
 export default {
-  input: './src/index.ts',
+  input: `${uiDir}/index.ts`,
   output: {
     globals: {
       vue: 'Vue',
     },
     name: 'VuetomUI',
-    file: 'dist/vuetom-ui.js',
+    file: `${uiDir}/dist/vuetom-ui.js`,
     format: 'umd',
     banner: banner,
     plugins: [process.env.NODE_ENV === 'production' ? terser() : null],
@@ -53,7 +54,7 @@ export default {
     esbuild({
       include: /\.[jt]s$/,
       minify: process.env.NODE_ENV === 'production',
-      target: 'es2015',
+      target: 'esnext',
     }),
     // babel({
     //   exclude: 'node_modules/**',
@@ -61,6 +62,7 @@ export default {
     // resolve(),
     replace({
       'process.env.NODE_ENV': JSON.stringify(env),
+      preventAssignment: true
     }),
     // typescript({
     //   tsconfigOverride: overrides

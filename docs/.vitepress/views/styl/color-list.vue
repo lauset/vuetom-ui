@@ -46,7 +46,7 @@
 
 <script>
   import kebabCase from 'lodash/kebabCase'
-  import colors from 'vuetom-ui/src/utils/colors'
+  // import colors from 'vuetom-ui/src/utils/colors'
 
   export default {
     name: 'ColorList',

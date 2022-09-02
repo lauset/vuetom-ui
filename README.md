@@ -20,7 +20,6 @@
    <img alt="npm" src="https://img.shields.io/npm/v/vuetom-ui"></a>
 </p>
 
-
 ## Introduction 📜
 
 A Vue3 UI library
@@ -86,7 +85,7 @@ A Vue3 UI library
 - dist
 - docs
 - src
-  - components 
+  - components
   - utils
   - index.ts
 - test
@@ -97,7 +96,8 @@ A Vue3 UI library
 | VuetomUI Version | Info |
 | - | :- |
 0.1.0 | Button Row Col |
-0.2.0 | Table Message |
+0.2.0 | Table Message ConsoleT JsonV |
+0.3.0 | Chore Pnpm |
 
 ## UI Support 🖥️
 
@@ -116,13 +116,11 @@ Please refer to the [ChangeLog](CHANGELOG.md) file.
 - [ElementPlus](https://element-plus.gitee.io/zh-CN/)
 - [Iconfont](https://www.iconfont.cn/)
 
-
 ## Useful Links 🔗
 
 - [Gitee](https://gitee.com/lauset/vuetom-ui)
 - [Github](https://github.com/lauset/vuetom-ui)
 
-
 ## Social Media 🌍
-- [Blog](http://blog.tomhub.com)
 
+- [Blog](http://blog.tomhub.com)

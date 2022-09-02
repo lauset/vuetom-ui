@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -12,28 +13,23 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": [
-    ],
+    "rootDir": ".",
     "paths": {
-      "@/*": [
-        "src/*"
+      "@vuetom-ui/*": [
+        "./packages/*"
       ]
     },
     "lib": [
       "esnext",
       "dom",
-      "dom.iterable",
-      "scripthost"
+      "dom.iterable"    
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
+    "packages"
+, "docs"  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/dist"
   ]
 }

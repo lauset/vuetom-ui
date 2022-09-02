@@ -1,4 +1,3 @@
-// rollup.config.esm.js
 import baseConfig, { file } from './rollup.config'
 
 export default {
